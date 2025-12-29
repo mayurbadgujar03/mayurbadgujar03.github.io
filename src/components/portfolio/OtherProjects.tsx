@@ -1,19 +1,5 @@
 import { GitHubIcon } from "./SkillIcons";
 
-interface OtherProject {
-  name: string;
-}
-
-const otherProjects: OtherProject[] = [
-  { name: "Reminder app with Twilio" },
-  { name: "Paytm, with a twist" },
-  { name: "Auto Email Terminal based AI Agent" },
-  { name: "Deploying a containerized Node.js application to ECR via CI/CD pipeline." },
-  { name: "Deploying a monorepo to a VM via Docker and CI/CD.." },
-  { name: "Containerizing different applications via Docker and deploying them in various methods like EC2, ASGs, ECS, ECR.." },
-  { name: "Monitoring the above via tools like NewRelic, Prometheus and Grafana." },
-];
-
 export const OtherProjects = () => {
   return (
     <section className="mt-16">
@@ -29,12 +15,21 @@ export const OtherProjects = () => {
       </a>
       
       <ul className="mt-6 space-y-2">
-        {otherProjects.map((project, index) => (
-          <li key={index} className="text-base text-foreground">
-            <span className="text-muted-foreground">-</span>
-            {project.name}
-          </li>
-        ))}
+        <li className="text-base text-foreground flex flex-wrap items-center gap-2">
+          Distributed Flash Sale Engine: A production-grade Node.js microservices system for handling 10,000+ concurrent users in flash sales, with atomic stock, order, and auth services. 
+          <a
+            href="https://github.com/mayurbadgujar03/Distributed-Flash-Sale-Engine"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-0.5 rounded font-medium transition-colors duration-200 bg-foreground/5 text-primary hover:bg-primary/90 hover:text-primary-foreground border border-foreground/10 focus:outline-none focus:ring-2 focus:ring-primary/40"
+            style={{
+              color: 'var(--primary)',
+              background: 'rgba(var(--foreground-rgb),0.05)',
+            }}
+          >
+            code
+          </a>
+        </li>
       </ul>
     </section>
   );

@@ -30,7 +30,6 @@ const frontendSkills = [
   { name: "TailwindCSS", icon: <TailwindIcon /> },
   { name: "Shadcn", icon: <ShadcnIcon /> },
   { name: "Typescript", icon: <TypeScriptIcon /> },
-  { name: "Motion", icon: <MotionIcon /> },
   { name: "Figma", icon: <FigmaIcon /> },
 ];
 
@@ -39,9 +38,7 @@ const backendSkills = [
   { name: "Express", icon: <ExpressIcon /> },
   { name: "MongoDB", icon: <MongoDBIcon /> },
   { name: "PostgreSQL", icon: <PostgreSQLIcon /> },
-  { name: "Supabase", icon: <SupabaseIcon /> },
   { name: "Prisma", icon: <PrismaIcon /> },
-  { name: "Turborepo", icon: <TurborepoIcon /> },
   { name: "Vercel", icon: <VercelIcon /> },
   { name: "Github", icon: <GitHubIcon /> },
 ];
@@ -52,7 +49,6 @@ const devopsSkills = [
   { name: "Kubernetes", icon: <KubernetesIcon /> },
   { name: "Prometheus", icon: <PrometheusIcon /> },
   { name: "Grafana", icon: <GrafanaIcon /> },
-  { name: "NewRelic", icon: <NewRelicIcon /> },
 ];
 
 export const Skills = () => {
