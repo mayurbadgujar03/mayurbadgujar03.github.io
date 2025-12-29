@@ -10,8 +10,8 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "MaxTeam (Flowbase)",
-    url: "https://github.com/mayurbadgujar03/MaxTeam",
+    name: "Flowbase",
+    url: "https://flowbaseapp.vercel.app/",
     description: "A full-stack project management and team collaboration platform with real-time task tracking, Kanban boards, team member management, rich documentation, and role-based access control. Features a modern React frontend with Shadcn/UI components and a robust Node.js + Express backend with MongoDB.",
     screenshot: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
     tags: ["React", "Node.js", "Express", "MongoDB", "TanStack Query", "Tailwind CSS", "TypeScript", "JWT"],
