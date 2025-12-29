@@ -5,20 +5,16 @@ interface Project {
   url: string;
   description: string;
   screenshot: string;
+  tags: string[];
 }
 
 const projects: Project[] = [
   {
-    name: "Project One",
-    url: "https://example.com",
-    description: "A full-stack application built with Next.js, TypeScript, and PostgreSQL.",
-    screenshot: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-  },
-  {
-    name: "Project Two",
-    url: "https://example.com",
-    description: "Real-time collaboration platform with WebSocket integration.",
-    screenshot: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    name: "MaxTeam (Flowbase)",
+    url: "https://github.com/mayurbadgujar03/MaxTeam",
+    description: "A full-stack project management and team collaboration platform with real-time task tracking, Kanban boards, team member management, rich documentation, and role-based access control. Features a modern React frontend with Shadcn/UI components and a robust Node.js + Express backend with MongoDB.",
+    screenshot: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+    tags: ["React", "Node.js", "Express", "MongoDB", "TanStack Query", "Tailwind CSS", "TypeScript", "JWT"],
   },
 ];
 
@@ -40,6 +36,17 @@ export const Projects = () => {
               <ArrowUpRight className="w-4 h-4" />
             </a>
             <p className="text-base text-foreground mt-1">{project.description}</p>
+            
+            <div className="mt-3 flex flex-wrap gap-2">
+              {project.tags.map((tag, tagIndex) => (
+                <span
+                  key={tagIndex}
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-foreground/5 text-foreground/80 border border-foreground/10"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
             
             <div className="mt-4 mb-10 rounded-2xl border-[6px] border-foreground overflow-hidden transition-transform duration-300 hover:scale-105">
               <img
