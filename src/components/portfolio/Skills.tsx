@@ -22,6 +22,10 @@ import {
   PrometheusIcon,
   GrafanaIcon,
   NewRelicIcon,
+  RedisIcon,
+  RenderIcon,
+  SystemDesignIcon,
+  WebSocketsIcon,
 } from "./SkillIcons";
 
 const frontendSkills = [
@@ -36,9 +40,12 @@ const frontendSkills = [
 const backendSkills = [
   { name: "Node.js", icon: <NodeIcon /> },
   { name: "Express", icon: <ExpressIcon /> },
+  { name: "Redis", icon: <RedisIcon /> },
+  { name: "WebSockets", icon: <WebSocketsIcon /> },
   { name: "MongoDB", icon: <MongoDBIcon /> },
   { name: "PostgreSQL", icon: <PostgreSQLIcon /> },
   { name: "Prisma", icon: <PrismaIcon /> },
+  { name: "System Design", icon: <SystemDesignIcon /> },
   { name: "Vercel", icon: <VercelIcon /> },
   { name: "Github", icon: <GitHubIcon /> },
 ];
@@ -47,9 +54,11 @@ const devopsSkills = [
   { name: "AWS", icon: <AWSIcon /> },
   { name: "Docker", icon: <DockerIcon /> },
   { name: "Kubernetes", icon: <KubernetesIcon /> },
+  { name: "Render", icon: <RenderIcon /> },
   { name: "Prometheus", icon: <PrometheusIcon /> },
   { name: "Grafana", icon: <GrafanaIcon /> },
 ];
+
 
 export const Skills = () => {
   return (

@@ -7,30 +7,13 @@ export const OtherProjects = () => {
         href="https://github.com/mayurbadgujar03"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 text-base md:text-lg text-foreground"
+        className="inline-flex items-center gap-2 text-base md:text-lg text-foreground group"
       >
-        <span className="text-link">Check out</span>
-        <span> my other Projects & Exercises here-</span>
-        <GitHubIcon className="w-6 h-6 text-foreground" />
+        <span className="text-link group-hover:underline underline-offset-4">Check out</span>
+        <span> my other Projects, exercises, and microservices on GitHub</span>
+        <GitHubIcon className="w-6 h-6 text-foreground transition-transform group-hover:scale-110" />
       </a>
-      
-      <ul className="mt-6 space-y-2">
-        <li className="text-base text-foreground flex flex-wrap items-center gap-2">
-          Distributed Flash Sale Engine: A production-grade Node.js microservices system for handling 10,000+ concurrent users in flash sales, with atomic stock, order, and auth services. 
-          <a
-            href="https://github.com/mayurbadgujar03/Distributed-Flash-Sale-Engine"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-2 py-0.5 rounded font-medium transition-colors duration-200 bg-foreground/5 text-primary hover:bg-primary/90 hover:text-primary-foreground border border-foreground/10 focus:outline-none focus:ring-2 focus:ring-primary/40"
-            style={{
-              color: 'var(--primary)',
-              background: 'rgba(var(--foreground-rgb),0.05)',
-            }}
-          >
-            code
-          </a>
-        </li>
-      </ul>
     </section>
   );
 };
+
