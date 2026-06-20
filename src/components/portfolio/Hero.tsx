@@ -17,7 +17,7 @@ export const Hero = () => {
 
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <a
-          href="/Resume.pdf"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
