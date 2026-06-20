@@ -21,7 +21,7 @@ const projects: Project[] = [
   {
     name: "Flowbase",
     description: "A production-ready, cross-platform (Web/PWA/Desktop) project management ecosystem. Engineered with hardware-accelerated UI transitions, a custom Markdown engine with strict XSS sanitization, and a secure cross-subdomain Google OAuth flow. Battle-tested by live teams during hackathons with 0ms perceived load times via Optimistic UI.",
-    screenshot: "/public/flowbase.png",
+    screenshot: "/flowbase.png",
     tags: ["React", "Node.js", "PWA", "OAuth 2.0", "MongoDB", "Service Workers", "Tailwind CSS"],
     apiEndpoint: "https://api.flowbase.mayurbadgujar.me/api/v1/public/stats",
     links: [
@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     name: "Distributed Flash Sale Engine",
     description: "A production-grade Node.js microservices system for handling 10,000+ concurrent users in flash sales, utilizing Kubernetes HPA and Redis atomic operations to prevent inventory overselling.",
-    screenshot: "/public/project-2.webp",
+    screenshot: "/project-2.webp",
     tags: ["Node.js", "Kubernetes", "Redis", "Microservices", "Docker"],
     links: [
       { label: "Watch Architecture Video", url: "https://www.linkedin.com/posts/mayurbadgujar03_systemdesign-microservices-kubernetes-ugcPost-7436425989288751105-MLqg/", type: "video" },
