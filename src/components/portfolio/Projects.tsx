@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { ArrowUpRight, Video, FileText, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -12,23 +13,25 @@ interface Project {
   description: string;
   screenshot: string;
   tags: string[];
+  apiEndpoint?: string;
   links: ProjectLink[];
 }
 
 const projects: Project[] = [
   {
     name: "Flowbase",
-    description: "A full-stack project management and team collaboration platform with real-time task tracking, Kanban boards, team member management, rich documentation, and role-based access control. Features a modern React frontend with Shadcn/UI components and a robust Node.js + Express backend with MongoDB.",
-    screenshot: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-    tags: ["React", "Node.js", "Express", "MongoDB", "TanStack Query", "Tailwind CSS", "TypeScript", "JWT"],
+    description: "A production-ready, cross-platform (Web/PWA/Desktop) project management ecosystem. Engineered with hardware-accelerated UI transitions, a custom Markdown engine with strict XSS sanitization, and a secure cross-subdomain Google OAuth flow. Battle-tested by live teams during hackathons with 0ms perceived load times via Optimistic UI.",
+    screenshot: "/public/flowbase.png",
+    tags: ["React", "Node.js", "PWA", "OAuth 2.0", "MongoDB", "Service Workers", "Tailwind CSS"],
+    apiEndpoint: "https://api.flowbase.mayurbadgujar.me/api/v1/public/stats",
     links: [
-      { label: "Live Application", url: "https://flowbaseapp.vercel.app/", type: "external" }
+      { label: "Live Application", url: "https://flowbase.mayurbadgujar.me", type: "external" }
     ]
   },
   {
     name: "Distributed Flash Sale Engine",
     description: "A production-grade Node.js microservices system for handling 10,000+ concurrent users in flash sales, utilizing Kubernetes HPA and Redis atomic operations to prevent inventory overselling.",
-    screenshot: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    screenshot: "/public/project-2.webp",
     tags: ["Node.js", "Kubernetes", "Redis", "Microservices", "Docker"],
     links: [
       { label: "Watch Architecture Video", url: "https://www.linkedin.com/posts/mayurbadgujar03_systemdesign-microservices-kubernetes-ugcPost-7436425989288751105-MLqg/", type: "video" },
@@ -36,6 +39,47 @@ const projects: Project[] = [
     ]
   }
 ];
+
+const LiveUserBadge = ({ apiEndpoint }: { apiEndpoint: string }) => {
+  const [totalUsers, setTotalUsers] = useState<number | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const fetchUsers = async () => {
+      try {
+        const res = await fetch(apiEndpoint);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success && typeof json.data?.totalUsers === "number") {
+            if (isMounted) {
+              setTotalUsers(json.data.totalUsers);
+            }
+          }
+        }
+      } catch (err) {
+        // Fail silently
+      }
+    };
+
+    fetchUsers();
+
+    // Check stats every 15 seconds to keep it "real-time"
+    const interval = setInterval(fetchUsers, 15000);
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
+  }, [apiEndpoint]);
+
+  if (totalUsers === null) return null;
+
+  return (
+    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+      <span>{totalUsers} Active Users</span>
+    </div>
+  );
+};
 
 export const Projects = () => {
   const getIcon = (type: string) => {
@@ -52,14 +96,19 @@ export const Projects = () => {
   return (
     <section className="mt-16">
       <h2 className="text-2xl font-semibold text-foreground">Featured Projects</h2>
-      
+
       <div className="mt-6 space-y-12">
         {projects.map((project, index) => (
           <div key={index} className="border-b border-border/50 pb-8 last:border-b-0 last:pb-0">
-            <h3 className="text-xl font-bold text-foreground">{project.name}</h3>
-            
+            <div className="flex items-center gap-3 flex-wrap">
+              <h3 className="text-xl font-bold text-foreground">{project.name}</h3>
+              {project.apiEndpoint && (
+                <LiveUserBadge apiEndpoint={project.apiEndpoint} />
+              )}
+            </div>
+
             <p className="text-base text-muted-foreground mt-2 leading-relaxed">{project.description}</p>
-            
+
             <div className="mt-3 flex flex-wrap gap-2">
               {project.tags.map((tag, tagIndex) => (
                 <span
@@ -70,7 +119,7 @@ export const Projects = () => {
                 </span>
               ))}
             </div>
-            
+
             <div className="mt-4 flex flex-wrap gap-3">
               {project.links.map((link, linkIndex) => (
                 <a
