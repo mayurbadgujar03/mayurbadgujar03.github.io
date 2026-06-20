@@ -10,14 +10,14 @@ export const Hero = () => {
       <p className="mt-2 text-base md:text-lg font-medium text-muted-foreground">
         Backend Developer | APIs, System Design, and Scalable Platform Engineering
       </p>
-      
+
       <p className="mt-6 text-base md:text-lg text-foreground leading-[1.6]">
         Web developer and Devops engineer with a strong hold on backend, deployments & scaling.
       </p>
-      
+
       <div className="mt-8 flex flex-wrap items-center gap-4">
-        <a 
-          href="/resume.pdf" 
+        <a
+          href="/Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -26,11 +26,11 @@ export const Hero = () => {
             View Resume
           </Button>
         </a>
-        
+
         <div className="text-base text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1">
           <span>Connect on</span>
-          <a 
-            href="https://www.linkedin.com/in/mayurbadgujar03/" 
+          <a
+            href="https://www.linkedin.com/in/mayurbadgujar03/"
             className="text-link hover:underline underline-offset-4 font-medium"
             target="_blank"
             rel="noopener noreferrer"
@@ -38,8 +38,8 @@ export const Hero = () => {
             LinkedIn
           </a>
           <span>• Reach me at</span>
-          <a 
-            href="mailto:mayurbadgujar873@gmail.com" 
+          <a
+            href="mailto:mayurbadgujar873@gmail.com"
             className="text-link hover:underline underline-offset-4 font-medium"
             target="_blank"
             rel="noopener noreferrer"
