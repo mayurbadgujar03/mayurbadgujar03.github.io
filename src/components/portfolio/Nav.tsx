@@ -7,19 +7,19 @@ export const Nav = () => {
       <div className="flex items-center gap-6">
         <a
           href="#career"
-          className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
           Experience
         </a>
         <a
           href="#proof-of-work"
-          className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
           Proof of Work
         </a>
         <a
           href="#projects"
-          className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
+          className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
           Projects
         </a>

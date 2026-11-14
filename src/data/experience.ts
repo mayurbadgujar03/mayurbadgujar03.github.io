@@ -1,89 +1,77 @@
 export interface ExperienceItem {
   id: string;
-  company: string;
   role: string;
-  period: string;
-  location?: string;
-  type: "work" | "leadership";
-  description?: string;
+  company: string;
+  companyUrl: string;
+  location: string;
+  timeline: string;
+  type: "engineering" | "leadership";
+  summary: string;
   highlights: string[];
   skills: string[];
-  url?: string;
-  urlLabel?: string;
 }
 
 export const experiences: ExperienceItem[] = [
   {
     id: "zwiebel-ai",
-    company: "Zwiebel AI",
     role: "Software Engineer Intern",
-    period: "Sep 2026 – Dec 2026",
+    company: "Zwiebel AI",
+    companyUrl: "#", 
     location: "Remote",
-    type: "work",
+    timeline: "Sep 2026 – Present",
+    type: "engineering",
+    summary: "Architecting backend microservices, real-time event routing, and AI pipelines for commercial SaaS products.",
     highlights: [
-      "Engineered an event-driven WhatsApp notification system using Meta Business API, triggering real-time alerts on booking confirmations, cancellations, and payment events across the SmashX platform.",
-      "Resolved critical cross-origin authentication failures blocking platform access, debugging OAuth token lifecycles and session persistence across microservices.",
-      "Integrated Gemini AI into ICS-LMS to automatically transcribe uploaded video lectures and generate context-aware quizzes, drastically reducing manual educator overhead.",
-      "Designed a real-time slot availability engine that completely eliminated double-bookings and removed manual scheduling friction, boosting customer retention by 35%."
+      "Engineered an event-driven WhatsApp notification webhook pipeline via Meta Business API, handling asynchronous transactional alerts.",
+      "Diagnosed and resolved critical authentication race conditions to ensure stable platform access and session persistence.",
+      "Managed backend infrastructure for an EdTech platform scaling to 1,000+ active students with integrated AI video transcription."
     ],
-    skills: ["Meta Business API", "Node.js", "Gemini AI", "Webhooks", "OAuth 2.0", "Redis", "Distributed Systems"],
-    url: "https://www.linkedin.com/in/mayurbadgujar03/",
-    urlLabel: "Company Profile"
+    skills: ["Node.js", "Meta API", "Event-Driven Architecture", "Auth Workflows", "Webhooks"]
   },
   {
-    id: "smashx",
-    company: "SmashX Sports Platform",
-    role: "Technical Consultant & Backend Architect",
-    period: "2026",
-    location: "Production Deployment",
-    type: "work",
+    id: "smashx-consulting",
+    role: "Backend Consultant",
+    company: "SmashX Sports",
+    companyUrl: "#",
+    location: "Contract / Remote",
+    timeline: "2026",
+    type: "engineering",
+    summary: "Built a multi-tenant sports arena booking SaaS and custom Direct-UPI transaction engine.",
     highlights: [
-      "Architected and deployed an end-to-end operations platform replacing manual WhatsApp bookings with an automated booking engine serving 50+ daily customers and growing client revenue by 33%.",
-      "Engineered a zero-commission Direct-UPI payment pipeline and automated Offline-to-Online retention loops.",
-      "Integrated database-level concurrency controls and Redis state checks ensuring zero double-bookings during peak turf hours."
+      "Engineered a zero-commission Direct-UPI intent payment pipeline to bypass standard gateway fees.",
+      "Created a chronological array sorting engine to resolve timezone boundary issues crossing 12:00 AM.",
+      "Designed a distributed slot availability engine with atomic conflict resolution, eliminating double-booking collisions."
     ],
-    skills: ["Node.js", "React", "Redis", "MongoDB", "Direct UPI", "SaaS Architecture"],
-    url: "/proof-of-work/smashx",
-    urlLabel: "View Case Study"
+    skills: ["Node.js", "Express", "Direct UPI", "Multi-Tenant Architecture", "Vercel"]
   },
   {
-    id: "chaicode",
-    company: "ChaiCode",
-    role: "Campus Ambassador & Event Lead",
-    period: "2025",
-    location: "Campus",
+    id: "chai-code",
+    role: "Campus Ambassador",
+    company: "Chai Aur Code",
+    companyUrl: "#",
+    location: "Dhule, India",
+    timeline: "Dec 2025 – Oct 2026",
     type: "leadership",
+    summary: "Spearheaded regional developer initiatives and institutional technical partnerships.",
     highlights: [
-      "Organized the college's largest developer tech summit with 600+ active participants.",
-      "Recognized publicly by Hitesh Choudhary for outstanding student community leadership and developer advocacy."
+      "Organized the college's largest technical symposium with 600+ student attendees; recognized publicly by founder Hitesh Choudhary.",
+      "Hosted 'Localhost to Live', guiding 50+ students through Git, GitHub Pages, and live cloud hosting architecture."
     ],
-    skills: ["Community Building", "Developer Relations", "Event Management"],
-    url: "https://www.linkedin.com/in/mayurbadgujar03/",
-    urlLabel: "LinkedIn Post"
+    skills: ["Developer Relations", "Public Speaking", "Technical Mentorship"]
   },
   {
-    id: "speaking",
-    company: "Tech Community & Developer Days",
-    role: "Public Speaker & Workshop Lead",
-    period: "2024 – 2025",
-    location: "Multiple Venues",
+    id: "aces-head",
+    role: "Technical Head",
+    company: "ACES Committee",
+    companyUrl: "#",
+    location: "Dhule, India",
+    timeline: "Sep 2025 – Oct 2026",
     type: "leadership",
+    summary: "Directed technical curriculum, hackathon judging, and engineering workshops.",
     highlights: [
-      "Delivered technical sessions and hands-on workshops at AWS, Microsoft, ChaiCode, and VS Code Dev Days.",
-      "Mentored peers on modern backend architecture, cloud fundamentals, and practical API design."
+      "Mentored junior engineering teams on REST API design, database schemas, and web development fundamentals.",
+      "Led technical execution and infrastructure for annual departmental coding events."
     ],
-    skills: ["Public Speaking", "System Design", "AWS", "Developer Mentorship"]
-  },
-  {
-    id: "awards",
-    company: "Hackathons & Competitions",
-    role: "Technical Innovator & Competitor",
-    period: "2023 – 2025",
-    type: "leadership",
-    highlights: [
-      "Best Use of Technology Award (2025): Machine Health Copilot — built real-time sensor monitoring for agricultural pumps using Groq LLM & custom Model Context Protocol (MCP) server, preventing motor burnouts and cutting repair costs by 95%.",
-      "First Prize, Avishkar Competition (Jul 2023): Won first place during freshman year competing against 4th-year senior engineering teams."
-    ],
-    skills: ["Model Context Protocol (MCP)", "Groq / LLaMA 3", "IoT & Diagnostics", "Rapid Prototyping"]
+    skills: ["Technical Leadership", "System Architecture Demos", "Project Management"]
   }
 ];
