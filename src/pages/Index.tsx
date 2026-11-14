@@ -14,12 +14,9 @@ import { ArrowRight, Briefcase } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Nav />
       <div className="max-w-[750px] mx-auto px-6 py-24">
-        <div className="opacity-0 animate-fade-up" style={{ animationDelay: "0ms" }}>
-          <Nav />
-        </div>
-        
-        <main className="mt-16">
+        <main className="mt-8">
           <div className="opacity-0 animate-fade-up" style={{ animationDelay: "100ms" }}>
             <Hero />
           </div>

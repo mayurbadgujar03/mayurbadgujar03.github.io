@@ -8,17 +8,17 @@ export const Career = () => {
 
   return (
     <section className="mt-20">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
-        <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
-          <Briefcase className="w-5 h-5 text-primary" />
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border pb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-foreground flex items-center gap-2">
+          <Briefcase className="w-5 h-5 text-primary shrink-0" />
           Experience & Impact
         </h2>
         
-        {/* Filter Pills */}
-        <div className="flex items-center gap-1.5 p-1 bg-muted rounded-lg text-xs font-medium">
+        {/* Added overflow-x-auto to allow scrolling on ultra-small screens without breaking layout */}
+        <div className="flex items-center gap-1.5 p-1 bg-muted rounded-lg text-xs font-medium overflow-x-auto w-full md:w-auto snap-x">
           <button
             onClick={() => setFilter("engineering")}
-            className={`px-3 py-1.5 rounded-md transition-all ${
+            className={`whitespace-nowrap snap-start px-3 py-2 md:py-1.5 rounded-md transition-all flex-1 md:flex-none ${
               filter === "engineering"
                 ? "bg-background text-foreground shadow-sm font-semibold"
                 : "text-muted-foreground hover:text-foreground"
@@ -28,7 +28,7 @@ export const Career = () => {
           </button>
           <button
             onClick={() => setFilter("leadership")}
-            className={`px-3 py-1.5 rounded-md transition-all ${
+            className={`whitespace-nowrap snap-start px-3 py-2 md:py-1.5 rounded-md transition-all flex-1 md:flex-none ${
               filter === "leadership"
                 ? "bg-background text-foreground shadow-sm font-semibold"
                 : "text-muted-foreground hover:text-foreground"

@@ -30,15 +30,15 @@ export const Hero = () => {
       {/* Quantitative Impact Metric Badges */}
       <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 border-y border-border/60 py-6 max-w-3xl">
         <div>
-          <div className="text-2xl font-bold font-mono text-foreground">100k+</div>
+          <div className="text-xl md:text-2xl font-bold font-mono text-foreground">100k+</div>
           <div className="text-xs text-muted-foreground mt-1">Concurrent Requests Tested</div>
         </div>
         <div>
-          <div className="text-2xl font-bold font-mono text-foreground">1,000+</div>
+          <div className="text-xl md:text-2xl font-bold font-mono text-foreground">1,000+</div>
           <div className="text-xs text-muted-foreground mt-1">Production Users Served</div>
         </div>
-        <div className="col-span-2 sm:col-span-1">
-          <div className="text-2xl font-bold font-mono text-foreground">0ms / 0%</div>
+        <div className="col-span-2 sm:col-span-1 mt-2 sm:mt-0">
+          <div className="text-xl md:text-2xl font-bold font-mono text-foreground">0ms / 0%</div>
           <div className="text-xs text-muted-foreground mt-1">Double-Bookings / Oversell</div>
         </div>
       </div>

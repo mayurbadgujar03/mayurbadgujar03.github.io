@@ -12,12 +12,8 @@ export default function SmashXCaseStudy() {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 selection:text-foreground antialiased">
-      <div className="max-w-[1100px] mx-auto px-6 py-12 md:py-24">
-        {/* Navigation Bar */}
-        <div className="mb-12 border-b border-border pb-6">
-          <Nav />
-        </div>
-
+      <Nav />
+      <div className="max-w-[1100px] mx-auto px-6 pt-28 pb-12 md:pb-24">
         {/* Back Button */}
         <div className="mb-10">
           <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group">
