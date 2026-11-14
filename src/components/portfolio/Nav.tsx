@@ -6,6 +6,12 @@ export const Nav = () => {
     <nav className="flex items-center justify-between w-full">
       <div className="flex items-center gap-6">
         <a
+          href="#career"
+          className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
+        >
+          Experience
+        </a>
+        <a
           href="#proof-of-work"
           className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline underline-offset-4 transition-all"
         >

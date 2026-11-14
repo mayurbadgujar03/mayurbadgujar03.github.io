@@ -27,7 +27,7 @@ const Index = () => {
             <Skills />
           </div>
           <div id="career" className="opacity-0 animate-fade-up" style={{ animationDelay: "300ms" }}>
-            {/* <Career /> */}
+            <Career />
           </div>
           
           <div id="proof-of-work" className="opacity-0 animate-fade-up mt-16" style={{ animationDelay: "350ms" }}>
